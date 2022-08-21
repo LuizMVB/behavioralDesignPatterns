@@ -17,15 +17,7 @@ public class Employee {
         return jobType;
     }
 
-    public void setJobType(JobType jobType) {
-        this.jobType = jobType;
-    }
-
     public BigDecimal getSalary() {
         return salary;
-    }
-
-    public void setSalary(BigDecimal salary) {
-        this.salary = salary;
     }
 }
