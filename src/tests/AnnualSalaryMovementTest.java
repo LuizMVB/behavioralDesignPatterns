@@ -2,10 +2,14 @@ package tests;
 
 import calculators.AnnualSalaryMovementCalculator;
 import models.Employee;
-import models.jobLevels.Advanced;
+import sporadicSalaryMovementJobLevels.Advanced;
+import sporadicSalaryMovementJobLevels.Beginner;
 
 import java.math.BigDecimal;
+import java.util.Arrays;
 import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
 
 public class AnnualSalaryMovementTest {
     public static void main(String [] args){
@@ -14,8 +18,20 @@ public class AnnualSalaryMovementTest {
         calendar.set(Calendar.MONTH, Calendar.AUGUST);
         calendar.set(Calendar.DAY_OF_MONTH, 22);
 
-        Employee emp = new Employee(new Advanced(), new BigDecimal("10000"), calendar.getTime());
+        Employee receive20kOrMore = new Employee(new Advanced(), new BigDecimal("20000"), new Date());
+        Employee advancedThatDontReceive20KOrMore = new Employee(new Advanced(), new BigDecimal("10000"), new Date());
+        Employee begginerThatDontRcv20kOrMoreButHasMoreThan1YearOfCont = new Employee(new Beginner(), new BigDecimal("10000"), calendar.getTime());
+        Employee doesntReceiveAnnualSalaryMovement = new Employee(new Beginner(), new BigDecimal("10000"), new Date());
 
-        System.out.println(AnnualSalaryMovementCalculator.calculateFor(emp));
+        List<Employee> employees = Arrays.asList(
+                receive20kOrMore,
+                advancedThatDontReceive20KOrMore,
+                begginerThatDontRcv20kOrMoreButHasMoreThan1YearOfCont,
+                doesntReceiveAnnualSalaryMovement
+        );
+
+        for(Employee emp: employees){
+            System.out.println(AnnualSalaryMovementCalculator.calculateFor(emp));
+        }
     }
 }

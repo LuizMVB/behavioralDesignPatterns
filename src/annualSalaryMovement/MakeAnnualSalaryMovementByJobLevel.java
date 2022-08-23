@@ -1,9 +1,9 @@
 package annualSalaryMovement;
 
 import models.Employee;
-import models.jobLevels.Advanced;
-import models.jobLevels.Intermediary;
-import models.jobLevels.JobLevel;
+import sporadicSalaryMovementJobLevels.Advanced;
+import sporadicSalaryMovementJobLevels.Intermediary;
+import sporadicSalaryMovementJobLevels.JobLevel;
 
 import java.math.BigDecimal;
 

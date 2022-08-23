@@ -1,6 +1,6 @@
 package calculators;
 
-import models.jobLevels.JobLevel;
+import sporadicSalaryMovementJobLevels.JobLevel;
 
 import java.math.BigDecimal;
 

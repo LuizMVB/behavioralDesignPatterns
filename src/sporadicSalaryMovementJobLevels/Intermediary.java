@@ -1,4 +1,4 @@
-package models.jobLevels;
+package sporadicSalaryMovementJobLevels;
 
 import java.math.BigDecimal;
 

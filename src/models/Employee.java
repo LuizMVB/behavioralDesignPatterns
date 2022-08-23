@@ -1,6 +1,6 @@
 package models;
 
-import models.jobLevels.JobLevel;
+import sporadicSalaryMovementJobLevels.JobLevel;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
