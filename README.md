@@ -2,7 +2,7 @@
 
 A simple project with the goal of to apply the main behavioral patterns of GoF
 
-## Mora about the domain
+## More about the domain
 
 It's a dummy financial management module with some business rules that allows to implement some of the main behavioral design patterns
 
@@ -18,7 +18,7 @@ The sporadic salary movement is based on job level of an employee
 
 ### Second rule: annual salary movement (implemented with Chain of Responsability pattern)
 
-There some criteria for defining annual salary movements. This criateria has a priority rule between them. 
+There are some criteria for defining annual salary movements. This criateria has a priority rule between them. 
 
 The annual salary movement must be based, first, by salary amount
 
