@@ -1,23 +1,35 @@
 package models;
 
-import models.jobTypes.JobType;
+import models.jobLevels.JobLevel;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.ZoneId;
+import java.util.Date;
 
 public class Employee {
-    private JobType jobType;
+    private JobLevel jobLevel;
     private BigDecimal salary;
+    private Date startDate;
 
-    public Employee(JobType jobType, BigDecimal salary) {
-        this.jobType = jobType;
+    public Employee(JobLevel jobLevel, BigDecimal salary, Date startDate) {
+        this.jobLevel = jobLevel;
         this.salary = salary;
+        this.startDate = startDate;
     }
 
-    public JobType getJobType() {
-        return jobType;
+    public JobLevel getJobLevel() {
+        return jobLevel;
     }
 
     public BigDecimal getSalary() {
         return salary;
+    }
+
+    public int getContributionTimeInYears(){
+        LocalDate startLocalDate = startDate.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+        Period period = Period.between(startLocalDate, LocalDate.now());
+        return period.getYears();
     }
 }

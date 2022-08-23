@@ -1,8 +1,8 @@
-package models.jobTypes;
+package models.jobLevels;
 
 import java.math.BigDecimal;
 
-public interface JobType {
+public interface JobLevel {
     /**
      * Calculates salary movement of a given salary
      * @param salary The given salary
