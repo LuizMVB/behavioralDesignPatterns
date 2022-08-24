@@ -2,8 +2,8 @@ package tests;
 
 import calculators.AnnualSalaryMovementCalculator;
 import models.Employee;
-import sporadicSalaryMovementJobLevels.Advanced;
-import sporadicSalaryMovementJobLevels.Beginner;
+import jobLevels.Advanced;
+import jobLevels.Beginner;
 
 import java.math.BigDecimal;
 import java.util.Arrays;

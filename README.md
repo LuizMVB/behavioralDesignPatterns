@@ -37,3 +37,21 @@ Fourth
 > If employee does not match any of this criteria, doesn't receive annual movement
 
 An employee cant receive the benefits of more than one criteria
+
+### Third rule: job level specification (implemented with State patern)
+
+Every job level has a specification: bronze, silver or gold
+
+These specifications are part os a sublevel division and can change by promotion
+
+Bronze to Silver
+
+> Employee receive a salary movement of 20%
+
+Silver to Gold
+
+> Employee receive a salary movement of 40%
+
+Gold to anything
+
+> Can't happen
