@@ -6,7 +6,7 @@ A simple project with the goal of to apply the main behavioral patterns of GoF
 
 It's a dummy financial management module with some business rules that allows to implement some of the main behavioral design patterns
 
-## Wich rule and what patterns is implemented here?
+## Wich rules and what patterns are implemented here?
 
 ### First rule: sporadic salary movement (implemented with Strategy pattern)
 
