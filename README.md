@@ -42,7 +42,7 @@ An employee cant receive the benefits of more than one criteria
 
 Every job level has a specification: bronze, silver or gold
 
-These specifications are part os a sublevel division and can change by promotion
+These specifications are part of a sublevel division and can change by promotion
 
 Bronze to Silver
 
