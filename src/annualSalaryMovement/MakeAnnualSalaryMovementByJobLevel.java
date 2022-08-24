@@ -14,12 +14,13 @@ public class MakeAnnualSalaryMovementByJobLevel extends AnnualSalaryMovement {
     }
 
     @Override
-    public BigDecimal calculateSalaryMovementFor(Employee employee) {
+    public boolean conditionToMakeMovement(Employee employee) {
         JobLevel jobLevel = employee.getJobLevel();
-        if(jobLevel instanceof Advanced || jobLevel instanceof Intermediary) {
-            return employee.getSalary().multiply(new BigDecimal("0.4"));
-        }
+        return jobLevel instanceof Advanced || jobLevel instanceof Intermediary;
+    }
 
-        return next.calculateSalaryMovementFor(employee);
+    @Override
+    public BigDecimal obtainPercentageAppliedToMovement() {
+        return new BigDecimal("0.4");
     }
 }

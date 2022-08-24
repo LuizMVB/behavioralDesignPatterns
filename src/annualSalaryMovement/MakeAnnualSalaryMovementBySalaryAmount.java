@@ -10,11 +10,13 @@ public class MakeAnnualSalaryMovementBySalaryAmount extends AnnualSalaryMovement
     }
 
     @Override
-    public BigDecimal calculateSalaryMovementFor(Employee employee) {
+    public boolean conditionToMakeMovement(Employee employee) {
         BigDecimal salary = employee.getSalary();
-        if(salary.compareTo(new BigDecimal("20000")) >= 0){
-            return salary.multiply(new BigDecimal("0.6"));
-        }
-        return next.calculateSalaryMovementFor(employee);
+        return salary.compareTo(new BigDecimal("20000")) >= 0;
+    }
+
+    @Override
+    public BigDecimal obtainPercentageAppliedToMovement() {
+        return new BigDecimal("0.6");
     }
 }

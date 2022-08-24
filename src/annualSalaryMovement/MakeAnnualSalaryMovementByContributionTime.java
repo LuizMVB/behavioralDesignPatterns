@@ -10,11 +10,12 @@ public class MakeAnnualSalaryMovementByContributionTime extends AnnualSalaryMove
     }
 
     @Override
-    public BigDecimal calculateSalaryMovementFor(Employee employee) {
-        if(employee.getContributionTimeInYears() > 1){
-            return employee.getSalary().multiply(new BigDecimal("0.2"));
-        }
+    public boolean conditionToMakeMovement(Employee employee) {
+        return employee.getContributionTimeInYears() > 1;
+    }
 
-        return next.calculateSalaryMovementFor(employee);
+    @Override
+    public BigDecimal obtainPercentageAppliedToMovement() {
+        return new BigDecimal("0.2");
     }
 }

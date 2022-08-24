@@ -11,5 +11,14 @@ public abstract class AnnualSalaryMovement {
         this.next = next;
     }
 
-    public abstract BigDecimal calculateSalaryMovementFor(Employee employee);
+    public abstract boolean conditionToMakeMovement(Employee employee);
+
+    public abstract BigDecimal obtainPercentageAppliedToMovement();
+
+    public BigDecimal calculateSalaryMovementFor(Employee employee){
+        if(conditionToMakeMovement(employee)){
+            return employee.getSalary().multiply(obtainPercentageAppliedToMovement());
+        }
+        return next.calculateSalaryMovementFor(employee);
+    }
 }

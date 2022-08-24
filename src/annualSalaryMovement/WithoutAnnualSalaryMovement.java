@@ -10,7 +10,12 @@ public class WithoutAnnualSalaryMovement extends AnnualSalaryMovement{
     }
 
     @Override
-    public BigDecimal calculateSalaryMovementFor(Employee employee) {
+    public boolean conditionToMakeMovement(Employee employee) {
+        return true;
+    }
+
+    @Override
+    public BigDecimal obtainPercentageAppliedToMovement() {
         return BigDecimal.ZERO;
     }
 }
