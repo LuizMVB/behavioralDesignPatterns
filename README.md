@@ -16,7 +16,7 @@ The sporadic salary movement is based on job level of an employee
 - intermediary: 40% of the actual salary
 - advanced: 80% of the actual salary
 
-### Second rule: annual salary movement (implemented with Chain of Responsability pattern)
+### Second rule: annual salary movement (implemented with Chain of Responsability and Template Method pattern)
 
 There are some criteria for defining annual salary movements. This criateria has a priority rule between them. 
 
