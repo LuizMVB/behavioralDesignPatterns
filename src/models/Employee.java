@@ -50,10 +50,6 @@ public class Employee {
         return period.getYears();
     }
 
-    public JobLevelSpecification getJobLevelSpecification() {
-        return jobLevelSpecification;
-    }
-
     public String obtainJobLevelSpecificationName(){
         return jobLevelSpecification.getClass().getSimpleName();
     }

@@ -55,3 +55,17 @@ Silver to Gold
 Gold to anything
 
 > Can't happen
+
+### Fourth rule: request for non-standard salary movements (implemented with Command and Observer)
+
+A manager can request for salary movement of an employee in another conditions than the specified by the system
+
+Because of it, the system needs to have an operational flow that allows the creation of requests
+
+The request needs to send an email and to be saved
+
+## Conclusion
+
+These are the main behavioral design patterns that I have listed here. 
+
+This repository will be used as content production material soon (once used, I will update this README with information on where you can find this material)
